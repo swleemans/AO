@@ -11,7 +11,7 @@ std::string Hungry(std::string);
 
 int main() {
     using namespace std;
-    cout << "Hi Tara";
+    cout << "Hi";
     cout << endl;
     cout << "I wrote you a program" << endl;
     string hun;
