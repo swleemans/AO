@@ -90,7 +90,6 @@ for i =1:3
         [~,kp2] = min(abs(piston_range - pistons));
         
         % Use lookup table to find required actuator commands 
-        %if get_commands==0: assume its a copout?
         cmd(1) = get_commands(kx2,ky2,kp2,1);
         cmd(2) = get_commands(kx2,ky2,kp2,2);
         cmd(3) = get_commands(kx2,ky2,kp2,3);
