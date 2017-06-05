@@ -42,10 +42,11 @@ ky2=[];
 address = [];
 xseg=zeros(4,37);
 yseg=zeros(4,37);
-for i =1:3
+%for k=1:50
+for i =1:2
     % increase number of active segments with increasing i
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    i
+   
     for seg = 1:37
         %%
         address = [seg * 3 - 2, seg * 3 - 1, seg * 3];
@@ -104,9 +105,10 @@ for i =1:3
         
     end
 end
-[error, HVAInfo] = RetrieveHVAInfo(HVA);
-[error State] = ReadHVAstate(BrdNum);
-    figure(1);
-    imagesc(reshape(State,HVAInfo.size(1),HVAInfo.size(2))');
-    title(sprintf('Sim time = %d', sim_time));
-    
+%end
+% [error, HVAInfo] = RetrieveHVAInfo(HVA);
+% [error State] = ReadHVAstate(BrdNum);
+%     figure(1);
+%     imagesc(reshape(State,HVAInfo.size(1),HVAInfo.size(2))');
+%     title(sprintf('Sim time = %d', sim_time));
+%     
