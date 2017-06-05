@@ -8,6 +8,7 @@ clear all
 addpath('C:\Program Files\BostonMicromachines\BostonMicro\Matlab\v5.2');
 addpath('C:\Program Files\BostonMicromachines\Winx64\x64');
 addpath('C:\Program Files\BostonMicromachines\BostonMicro');
+addpath(genpath('BostonMicro v5.2'))
 % Load lookup table data
 load('Lookup_Table.mat');
 load('seg_r_theta_xy.mat');
@@ -103,3 +104,9 @@ for i =1:3
         
     end
 end
+[error, HVAInfo] = RetrieveHVAInfo(HVA);
+[error State] = ReadHVAstate(BrdNum);
+    figure(1);
+    imagesc(reshape(State,HVAInfo.size(1),HVAInfo.size(2))');
+    title(sprintf('Sim time = %d', sim_time));
+    
