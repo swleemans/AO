@@ -11,7 +11,7 @@ addpath('C:\Program Files\BostonMicromachines\BostonMicro');
 addpath(genpath('BostonMicro v5.2'))
 % Load lookup table data
 load('Lookup_Table.mat');
-load('seg_r_theta_xy.mat');
+load('indexRthetaUVXY.mat')
 % Specify PCIe Board number for XCL driver (usually 1)
 BrdNum = 1;
 
@@ -33,7 +33,7 @@ segBool=[];
 %Create matrix with all segments to be turned away from center. Selected by
 %dist from center (seg 19)
 for i=1:4
-    segBool(:,i)=indexRthetaXY(:,2)>rshell(i);
+    segBool(:,i)=indexRthetaUVXY(:,2)>rshell(i);
 end
 xtilts=[];
 ytilts=[];
@@ -43,7 +43,7 @@ address = [];
 xseg=zeros(4,37);
 yseg=zeros(4,37);
 %for k=1:50
-for i =1:2
+for i =1:4
     % increase number of active segments with increasing i
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    
@@ -55,8 +55,8 @@ for i =1:2
             %seg
 %           ytilts=0
 %           xtilts=0
-            xtilts = indexRthetaXY(seg,4)*maxtilt;
-            ytilts = -indexRthetaXY(seg,5)*maxtilt;
+            xtilts = indexRthetaUVXY(seg,4)*maxtilt;
+            ytilts = -indexRthetaUVXY(seg,5)*maxtilt;
         end
         % Inner segments level
         if segBool(seg,i) == 0
@@ -104,6 +104,8 @@ for i =1:2
         end
         
     end
+    figure(i)
+   quiver(indexRthetaUVXY(:,6),indexRthetaUVXY(:,7),transpose(xseg(i,:)),-transpose(yseg(i,:)))
 end
 %end
 % [error, HVAInfo] = RetrieveHVAInfo(HVA);
