@@ -6,11 +6,13 @@
 %
 clear all
 addpath(genpath('BostonMicro v5.2'))
+addpath(genpath('C:\Program Files\BostonMicromachines\BostonMicro'))
 % Load lookup table data
 load('Lookup_Table.mat');
 load('indexRthetaUVXY.mat')
 % Specify PCIe Board number for XCL driver (usually 1)
 BrdNum = 1;
+HVA='XCL 111';
 
 % Setup driver: All errors should return 0
 error_setup = SetUpHVA(BrdNum, HVA);
