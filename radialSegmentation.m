@@ -5,9 +5,6 @@
 % Make sure the path includes the BMC driver software
 %
 clear all
-addpath('C:\Program Files\BostonMicromachines\BostonMicro\Matlab\v5.2');
-addpath('C:\Program Files\BostonMicromachines\Winx64\x64');
-addpath('C:\Program Files\BostonMicromachines\BostonMicro');
 addpath(genpath('BostonMicro v5.2'))
 % Load lookup table data
 load('Lookup_Table.mat');
