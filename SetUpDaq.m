@@ -10,5 +10,5 @@ lh = addlistener(s,'DataAvailable', @plotData);
  startBackground(s);
  'Type s.stop to stop listening'
  function plotData(src,event)
-     plot(event.TimeStamps, event.Data)
+     plot(event.TimeStamps, event.Data) 
  end
