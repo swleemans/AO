@@ -48,8 +48,8 @@ seg = Seg;
             PokeDM(BrdNum,addr,val);
         end
         
-    figure(i)
-   quiver(indexRthetaUVXY(:,6),indexRthetaUVXY(:,7),transpose(xseg(i,:)),-transpose(yseg(i,:)))
+    figure()
+   %quiver(indexRthetaUVXY(:,6),indexRthetaUVXY(:,7),transpose(xseg(:)),-transpose(yseg(:)))
 end
 
 
