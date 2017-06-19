@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
->>>>>>> Stashed changes
 
 % Simon W. Leemans
 % May 2017
@@ -9,7 +5,6 @@
 % Make sure the path includes the BMC driver software
 %
 clear all
-<<<<<<< Updated upstream
 addpath(genpath('BostonMicro v5.2'))
 addpath(genpath('C:\Program Files\BostonMicromachines\BostonMicro'))
 =======
@@ -125,7 +120,6 @@ addpath('C:\Program Files\BostonMicromachines\BostonMicro\Matlab\v5.2');
 addpath('C:\Program Files\BostonMicromachines\Winx64\x64');
 addpath('C:\Program Files\BostonMicromachines\BostonMicro');
 addpath(genpath('BostonMicro v5.2'))
->>>>>>> Stashed changes
 % Load lookup table data
 load('Lookup_Table.mat');
 load('indexRthetaUVXY.mat')
@@ -134,7 +128,6 @@ BrdNum = 1;
 <<<<<<< Updated upstream
 HVA='XCL 111';
 =======
->>>>>>> Stashed changes
 
 % Setup driver: All errors should return 0
 error_setup = SetUpHVA(BrdNum, HVA);
@@ -235,6 +228,9 @@ end
 %     imagesc(reshape(State,HVAInfo.size(1),HVAInfo.size(2))');
 %     title(sprintf('Sim time = %d', sim_time));
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 %     
 % for i =1:4
 %     % increase number of active segments with increasing i
@@ -308,3 +304,4 @@ end
 
 >>>>>>> Stashed changes
 >>>>>>> c55afe3c0772600ed9d1531f3409e269afa51a1e
+>>>>>>> origin/master

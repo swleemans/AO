@@ -10,6 +10,10 @@ lh = addlistener(s,'DataAvailable', @plotData);
  startBackground(s);
  'Type s.stop to stop listening'
  function plotData(src,event)
+<<<<<<< HEAD
+     plot(event.TimeStamps, event.Data) 
+=======
 % ylim([0 4])
      plot(event.TimeStamps, event.Data)
+>>>>>>> origin/master
  end
