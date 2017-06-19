@@ -7,7 +7,7 @@
 clear all
 addpath(genpath('BostonMicro v5.2'))
 addpath(genpath('C:\Program Files\BostonMicromachines\BostonMicro'))
-=======
+
 addpath('C:\Program Files\BostonMicromachines\BostonMicro\Matlab\v5.2');
 addpath('C:\Program Files\BostonMicromachines\Winx64\x64');
 addpath('C:\Program Files\BostonMicromachines\BostonMicro');
@@ -125,9 +125,9 @@ load('Lookup_Table.mat');
 load('indexRthetaUVXY.mat')
 % Specify PCIe Board number for XCL driver (usually 1)
 BrdNum = 1;
-<<<<<<< Updated upstream
+
 HVA='XCL 111';
-=======
+
 
 % Setup driver: All errors should return 0
 error_setup = SetUpHVA(BrdNum, HVA);
@@ -227,11 +227,7 @@ end
 %     figure(1);
 %     imagesc(reshape(State,HVAInfo.size(1),HVAInfo.size(2))');
 %     title(sprintf('Sim time = %d', sim_time));
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-%     
 % for i =1:4
 %     % increase number of active segments with increasing i
 %     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -296,12 +292,4 @@ end
 %     figure(i)
 %    quiver(indexRthetaUVXY(:,6),indexRthetaUVXY(:,7),transpose(xseg(i,:)),-transpose(yseg(i,:)))
 % end
-=======
-<<<<<<< Updated upstream
-%     
-=======
-%     
 
->>>>>>> Stashed changes
->>>>>>> c55afe3c0772600ed9d1531f3409e269afa51a1e
->>>>>>> origin/master
