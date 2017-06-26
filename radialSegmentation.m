@@ -64,6 +64,7 @@ for i =1:4
         if segBool(seg,i) == 0
             xtilts = 0;
             ytilts = 0;
+            piston
         end
                 
         % Lookup closest tilt indices in table
@@ -108,6 +109,7 @@ for i =1:4
     end
     figure(i)
    quiver(indexRthetaUVXY(:,6),indexRthetaUVXY(:,7),transpose(xseg(i,:)),-transpose(yseg(i,:)))
+   
 end
 %end
 % [error, HVAInfo] = RetrieveHVAInfo(HVA);
